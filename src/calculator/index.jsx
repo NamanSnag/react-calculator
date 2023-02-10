@@ -18,7 +18,6 @@ const Calculator = () => {
     } else if (button === "C") {
       clear();
     } else {
-      console.log(answer, " " , calculation)
       setAnswer(answer + button);
       setCalculation(calculation.concat(button));
     }
