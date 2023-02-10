@@ -1,0 +1,71 @@
+.calculator {
+    border-radius: 10px;
+    padding: 10px;
+    background-color: rgba(240, 248, 255, 0.436);
+    backdrop-filter: blur(4px);
+    width: 40vw;
+    max-width: 400px;
+    min-width: 250px;
+
+    .answer{
+        margin-bottom: 16px;
+        input{
+            background-color: rgba(28, 27, 27, 0.559);
+            display: flex;
+            flex-wrap: wrap;
+            backdrop-filter: blur(4px);
+            width: 100%;
+            font-size: 40px;
+            text-align: end;
+            padding: 10px 20px;
+            color: aliceblue;
+            outline: none;
+            border: 2px solid rgb(255, 170, 60);
+            border-top-left-radius: 5px;
+            border-top-right-radius: 5px;
+        }
+    }
+
+    .buttons{
+        display: grid;
+        height: 300px;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+        grid-template-areas: 
+        "ac ac percentage divider"
+        "seven eight nine multipler"
+        "four five six minus"
+        "one two three plus"
+        "zero zero dot equal";
+        background-color: rgb(204, 202, 202);
+        gap: 0.1rem;
+
+        @media screen and (max-width: 600px) {
+            height: 400px;
+        }
+        
+        button {
+            border: none;
+            font-size: 20px;
+            color: rgb(145, 149, 153);
+
+            &:hover{
+                background-color: aliceblue;
+                color: black;
+            }
+        }
+
+        #ac {
+            grid-area: ac;
+        }
+
+        #zero {
+            grid-area: zero;
+        }
+
+        .symbol {
+            background-color: rgb(246, 172, 54);
+            color: white;
+        }
+    }
+}
